@@ -1,5 +1,5 @@
 // ============================================
-// SUKOON RESORTS — BOOKING FORM BACKEND
+// Skarchan RESORTS — BOOKING FORM BACKEND
 // Paste this file into: Google Sheet > Extensions > Apps Script
 // ============================================
 

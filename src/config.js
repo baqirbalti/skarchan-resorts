@@ -20,7 +20,7 @@ export const HOTEL_PHONE = "+92 340 5979568";
 //    - Execute as: Me
 //    - Who has access: Anyone
 // 4. Copy the deployment URL (ends with /exec) and paste it below.
-export const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwYxpDpJGjvFUB8hb1eBsWdp_emzUe3kC311UMLOw8Tz9vrfVCu8maYEEeaoDsPBXIUUQ/exec";
+export const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyk7-wprW2xZfeLObpRWFGF0ftVY8sOEeuAz6zOo6cm7lMg7cQgL6OqO7gDD9WRJvDT3A/exec";
 
 // Sends a room booking submission to the Google Apps Script backend,
 // which appends a row to the Google Sheet and emails the hotel.
