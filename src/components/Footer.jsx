@@ -12,7 +12,7 @@ export default function Footer({ setPage }) {
         {/* Brand */}
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
-            <img src={IMGS.logo} alt="logo" style={{ width: 42, height: 42, borderRadius: "50%", objectFit: "cover", border: "1px solid #A85A2E" }} />
+            <img src={IMGS.skarchanlogo} alt="logo" style={{ width: 42, height: 42, borderRadius: "50%", objectFit: "cover", border: "1px solid #A85A2E" }} />
             <span style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 18, color: "#F7F3EC", letterSpacing: 2 }}>
               {HOTEL_NAME.toUpperCase()}
             </span>
