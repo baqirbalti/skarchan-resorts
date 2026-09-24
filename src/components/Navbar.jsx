@@ -46,7 +46,7 @@ export default function Navbar({ page, setPage }) {
         {/* Logo */}
         <div onClick={() => navigate("home")} style={{ cursor: "pointer", display: "flex", alignItems: "center", gap: 10 }}>
           <img
-            src={IMGS.logo}
+            src={IMGS.skarchanlogo}
             alt={HOTEL_NAME}
             style={{ width: 44, height: 44, borderRadius: "50%", objectFit: "cover", border: "2px solid #A85A2E" }}
           />

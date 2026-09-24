@@ -365,7 +365,7 @@ function BookingReviews() {
     return out;
   };
 
-  const bookingUrl = "https://www.booking.com/hotel/pk/sukoon-resorts-skardu1.en-gb.html?aid=2276380&label=msn-6A_rx8dAdsR1ypVjcy_CrQ-79989662746717%3Atikwd-79989881430661%3Aloc-144%3Aneo%3Amte%3Alp152852%3Adec%3Acid578349423%3Aagid1279832861536322&sid=a0ad6488aa7f1989b3d59d5afb9fa458&all_sr_blocks=1223297906_400507833_2_2_0&checkin=2026-06-14&checkout=2026-06-15&dest_id=-2774916&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=1223297906_400507833_2_2_0&hpos=1&matching_block_id=1223297906_400507833_2_2_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1223297906_400507833_2_2_0__1267200&srepoch=1779955111&srpvid=11f738110c040085&type=total&ucfs=1&#tab-reviews";
+  const bookingUrl = "https://www.booking.com/hotel/pk/skarchan-resort-skardu.html?aid=357028&label=mkt123sc-c8547b82-0bbf-4397-a4a3-8c35fee4db71&sid=a0ad6488aa7f1989b3d59d5afb9fa458&checkin=2026-09-23&checkout=2026-09-24&dest_id=-2774916&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&soh=1&sr_order=popularity&srepoch=1790237688&srpvid=7fa339f7b03104e3&type=total&ucfs=1&#tab-reviews";
 
   return (
     <>
@@ -475,8 +475,8 @@ function BookingReviews() {
 
 // ── 📍 Location Section ───────────────────────────────────────
 function LocationSection() {
-  const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1314.9360563402633!2d75.5703594!3d35.2880625!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDE3JzE3LjAiTiA3NcKwMzQndzEzLjMnRQ!5e0!3m2!1sen!2spk!4v1716900000000!5m2!1sen!2spk";
-  const directMapUrl = "https://maps.google.com/?q=35.2880625,75.5703594";
+  const mapEmbedUrl = "https://www.google.com/maps?ll=35.270433,75.635115&z=17&t=m&hl=en-GB&gl=US&mapclient=embed&cid=15340048137973833197";
+  const directMapUrl = "https://www.google.com/maps?ll=35.270433,75.635115&z=17&t=m&hl=en-GB&gl=US&mapclient=embed&cid=15340048137973833197";
 
   return (
     <>
@@ -490,7 +490,7 @@ function LocationSection() {
             </h2>
             <div style={{ width: "40px", height: "2px", background: "#A85A2E", margin: "12px auto 0" }} />
             <p style={{ fontFamily: "Lato, sans-serif", fontSize: "14px", color: "#555", marginTop: "16px", marginBottom: "20px" }}>
-              📍 Plus Code: <strong>7HQC+64H Skardu, Gilgit-Baltistan, Pakistan</strong>
+              📍 Plus Code: <strong>opposite to Buddha Rock Skardu, Skardu, 16100</strong>
             </p>
             
             <button 

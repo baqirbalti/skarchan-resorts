@@ -7,8 +7,8 @@ export const HOTEL_NAME = "Skarchan Resort";
 export const HOTEL_TAGLINE = "Where the Mountains Meet Timeless Luxury";
 export const HOTEL_LOCATION = "Opposite to Buddha Rock, Skardu";
 export const HOTEL_EMAIL = "info@skarchanresorts.com";
-export const WHATSAPP_NUMBER = "923322785666"; // Replace with real number (no + sign)
-export const HOTEL_PHONE = "+92 332 2785666";
+export const WHATSAPP_NUMBER = "923458565654"; // Replace with real number (no + sign)
+export const HOTEL_PHONE = "+92 345 8565654";
 
 // ============================================
 // GOOGLE APPS SCRIPT — BOOKING FORM BACKEND
