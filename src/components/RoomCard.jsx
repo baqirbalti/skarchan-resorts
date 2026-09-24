@@ -45,7 +45,7 @@ export default function RoomCard({ room, setPage, setRoomId, delay = 0 }) {
           {/* Category Badge */}
           <div style={{
             position: "absolute", top: 16, right: 16,
-            background: "#984A1C", color: "#FFFFFF",
+            background: "#A85A2E", color: "#FFFFFF",
             fontSize: 11, fontFamily: "Lato, sans-serif",
             letterSpacing: 2, padding: "6px 14px", borderRadius: "4px",
             fontWeight: 700, boxShadow: "0 4px 10px rgba(0,0,0,0.2)"
@@ -61,7 +61,7 @@ export default function RoomCard({ room, setPage, setRoomId, delay = 0 }) {
           <h3 style={{
             fontFamily: "Cormorant Garamond, serif",
             fontSize: 30,
-            color: "#1C1209",
+            color: "#211D19",
             margin: "0 0 12px",
             fontWeight: 600,
             lineHeight: 1.1
@@ -72,10 +72,10 @@ export default function RoomCard({ room, setPage, setRoomId, delay = 0 }) {
           {/* Minimal Quick Stats (Clean and simple) */}
           <div style={{
             display: "flex", gap: "12px", alignItems: "center", flexWrap: "wrap", marginBottom: "24px",
-            fontFamily: "Lato, sans-serif", fontSize: 13, color: "#7A6652"
+            fontFamily: "Lato, sans-serif", fontSize: 13, color: "#6E6459"
           }}>
             <span style={{ display: "flex", alignItems: "center", gap: 6 }}>🛏 {room.beds || "Beds N/A"}</span>
-            <span style={{ color: "#E0D8C8" }}>|</span>
+            <span style={{ color: "#DDD5C7" }}>|</span>
             <span style={{ display: "flex", alignItems: "center", gap: 6 }}>📐 {room.size || "Size N/A"}</span>
           </div>
 
@@ -88,17 +88,17 @@ export default function RoomCard({ room, setPage, setRoomId, delay = 0 }) {
           {/* 3. Price & Action Button */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
             <div>
-              <p style={{ margin: "0 0 4px", fontSize: 11, color: "#8C7B6B", fontFamily: "Lato, sans-serif", textTransform: "uppercase", letterSpacing: 1 }}>
+              <p style={{ margin: "0 0 4px", fontSize: 11, color: "#7D7368", fontFamily: "Lato, sans-serif", textTransform: "uppercase", letterSpacing: 1 }}>
                 Starting from
               </p>
-              <span style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 24, color: "#984A1C", fontWeight: 700 }}>
+              <span style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 24, color: "#A85A2E", fontWeight: 700 }}>
                 {room.price}
               </span>
             </div>
 
             {/* Solid, attention-grabbing button */}
             <button style={{
-              background: "#984A1C",
+              background: "#A85A2E",
               color: "#FFFFFF",
               border: "none",
               padding: "10px 20px",
@@ -110,8 +110,8 @@ export default function RoomCard({ room, setPage, setRoomId, delay = 0 }) {
               cursor: "pointer",
               transition: "background 0.3s"
             }}
-            onMouseOver={e => e.currentTarget.style.background = "#7A3B16"}
-            onMouseOut={e => e.currentTarget.style.background = "#984A1C"}
+            onMouseOver={e => e.currentTarget.style.background = "#8B4623"}
+            onMouseOut={e => e.currentTarget.style.background = "#A85A2E"}
             >
               VIEW ROOM
             </button>

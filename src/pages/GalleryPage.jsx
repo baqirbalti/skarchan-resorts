@@ -16,17 +16,17 @@ export default function GalleryPage({ setPage }) {
     : [];
 
   return (
-    <div style={{ background: "#F5EFE6", minHeight: "100vh", paddingTop: 80 }}>
+    <div style={{ background: "#F7F3EC", minHeight: "100vh", paddingTop: 80 }}>
 
       {/* Page header */}
-      <div style={{ background: "#2C1F14", padding: "70px 32px", textAlign: "center" }}>
+      <div style={{ background: "#2A2622", padding: "70px 32px", textAlign: "center" }}>
         <AnimBlock>
           <p className="section-label" style={{ textAlign: "center" }}>VISUAL STORIES</p>
-          <h1 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "clamp(32px, 6vw, 68px)", color: "#F5EFE6", fontWeight: 300, letterSpacing: 3 }}>
+          <h1 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "clamp(32px, 6vw, 68px)", color: "#F7F3EC", fontWeight: 300, letterSpacing: 3 }}>
             Gallery
           </h1>
-          <p style={{ fontFamily: "Lato, sans-serif", fontSize: 14, color: "#8C7B6B", maxWidth: 500, margin: "16px auto 0", lineHeight: 1.8 }}>
-            A glimpse into the beauty of Skarchan Resorts — from our heritage architecture and rooms to the majestic Karakoram that surrounds us.
+          <p style={{ fontFamily: "Lato, sans-serif", fontSize: 14, color: "#7D7368", maxWidth: 500, margin: "16px auto 0", lineHeight: 1.8 }}>
+            A glimpse into the beauty of Skarchan Resort — from our heritage architecture and rooms to the majestic Karakoram that surrounds us.
           </p>
         </AnimBlock>
       </div>
@@ -40,9 +40,9 @@ export default function GalleryPage({ setPage }) {
               onClick={() => setActiveCategory(id)}
               style={{
                 padding: "8px 22px", borderRadius: 2, cursor: "pointer",
-                border: "1px solid #C4922A",
-                background: activeCategory === id ? "#C4922A" : "transparent",
-                color: activeCategory === id ? "#F5EFE6" : "#C4922A",
+                border: "1px solid #A85A2E",
+                background: activeCategory === id ? "#A85A2E" : "transparent",
+                color: activeCategory === id ? "#F7F3EC" : "#A85A2E",
                 fontFamily: "Lato, sans-serif", fontSize: 11, letterSpacing: 2,
                 fontWeight: 700, transition: "all 0.3s",
               }}
@@ -67,8 +67,8 @@ export default function GalleryPage({ setPage }) {
                 onClick={() => setLightboxIdx(i)}
                 style={{
                   cursor: "zoom-in", overflow: "hidden", borderRadius: 2,
-                  background: "#EDE0CE", position: "relative",
-                  border: "1px solid #C8B49A",
+                  background: "#EFEAE0", position: "relative",
+                  border: "1px solid #B7AE9E",
                   aspectRatio: "4/3",
                 }}
               >
@@ -90,7 +90,7 @@ export default function GalleryPage({ setPage }) {
                   onMouseOver={e => e.currentTarget.style.opacity = 1}
                   onMouseOut={e => e.currentTarget.style.opacity = 0}
                 >
-                  <p style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 14, color: "#F5EFE6", margin: 0, fontStyle: "italic" }}>
+                  <p style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 14, color: "#F7F3EC", margin: 0, fontStyle: "italic" }}>
                     View Full Image
                   </p>
                 </div>
@@ -100,13 +100,13 @@ export default function GalleryPage({ setPage }) {
         </div>
 
         {filtered.length === 0 && (
-          <p style={{ textAlign: "center", fontFamily: "Lato, sans-serif", color: "#8C7B6B", padding: "60px 0" }}>
+          <p style={{ textAlign: "center", fontFamily: "Lato, sans-serif", color: "#7D7368", padding: "60px 0" }}>
             No photos in this category yet.
           </p>
         )}
 
         {/* Count */}
-        <p style={{ textAlign: "center", fontFamily: "Lato, sans-serif", fontSize: 12, color: "#8C7B6B", marginTop: 32, letterSpacing: 1 }}>
+        <p style={{ textAlign: "center", fontFamily: "Lato, sans-serif", fontSize: 12, color: "#7D7368", marginTop: 32, letterSpacing: 1 }}>
           Showing {filtered.length} photo{filtered.length !== 1 ? "s" : ""}
         </p>
       </div>

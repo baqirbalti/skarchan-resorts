@@ -46,13 +46,13 @@ export default function Navbar({ page, setPage }) {
         {/* Logo */}
         <div onClick={() => navigate("home")} style={{ cursor: "pointer", display: "flex", alignItems: "center", gap: 10 }}>
           <img
-            src={IMGS.skarchanlogo}
-            alt="Sukoon Resorts"
-            style={{ width: 44, height: 44, borderRadius: "50%", objectFit: "cover", border: "2px solid #C4922A" }}
+            src={IMGS.logo}
+            alt={HOTEL_NAME}
+            style={{ width: 44, height: 44, borderRadius: "50%", objectFit: "cover", border: "2px solid #A85A2E" }}
           />
           <span style={{
             fontFamily: "Cormorant Garamond, serif", fontSize: 20, fontWeight: 700,
-            color: isSolid ? "#1C1209" : "#F5EFE6", letterSpacing: 1,
+            color: isSolid ? "#211D19" : "#F7F3EC", letterSpacing: 1,
             transition: "color 0.4s",
           }}>
             {HOTEL_NAME.toUpperCase()}
@@ -67,8 +67,8 @@ export default function Navbar({ page, setPage }) {
               onClick={() => navigate(key)}
               style={{
                 cursor: "pointer", fontFamily: "Lato, sans-serif", fontSize: 13, letterSpacing: 1,
-                color: page === key ? "#C4922A" : (isSolid ? "#1C1209" : "#F5EFE6"),
-                borderBottom: page === key ? "1px solid #C4922A" : "1px solid transparent",
+                color: page === key ? "#A85A2E" : (isSolid ? "#211D19" : "#F7F3EC"),
+                borderBottom: page === key ? "1px solid #A85A2E" : "1px solid transparent",
                 paddingBottom: 2, fontWeight: page === key ? 700 : 400,
                 transition: "color 0.3s, border-color 0.3s",
               }}
@@ -86,7 +86,7 @@ export default function Navbar({ page, setPage }) {
           onClick={() => setMenuOpen(true)}
           style={{
             display: "none", background: "none", border: "none",
-            color: isSolid ? "#1C1209" : "#F5EFE6", fontSize: 28, lineHeight: 1,
+            color: isSolid ? "#211D19" : "#F7F3EC", fontSize: 28, lineHeight: 1,
           }}
           className="hamburger-btn"
         >
@@ -103,18 +103,18 @@ export default function Navbar({ page, setPage }) {
         }}>
           <button
             onClick={() => setMenuOpen(false)}
-            style={{ position: "absolute", top: 22, right: 26, background: "none", border: "none", fontSize: 32, color: "#1C1209" }}
+            style={{ position: "absolute", top: 22, right: 26, background: "none", border: "none", fontSize: 32, color: "#211D19" }}
           >
             ✕
           </button>
-          <img src={IMGS.logo} alt="logo" style={{ width: 60, height: 60, borderRadius: "50%", objectFit: "cover", border: "2px solid #C4922A", marginBottom: 8 }} />
+          <img src={IMGS.logo} alt="logo" style={{ width: 60, height: 60, borderRadius: "50%", objectFit: "cover", border: "2px solid #A85A2E", marginBottom: 8 }} />
           {navLinks.map(({ label, key }) => (
             <span
               key={key}
               onClick={() => navigate(key)}
               style={{
                 fontFamily: "Cormorant Garamond, serif", fontSize: 34, cursor: "pointer",
-                color: page === key ? "#C4922A" : "#1C1209", fontWeight: 600,
+                color: page === key ? "#A85A2E" : "#211D19", fontWeight: 600,
               }}
             >
               {label}

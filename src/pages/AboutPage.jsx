@@ -5,17 +5,17 @@ import { IMGS } from "../assets/images.js";
 
 export default function AboutPage({ setPage }) {
   return (
-    <div style={{ background: "#F5EFE6", minHeight: "100vh", paddingTop: 80 }}>
+    <div style={{ background: "#F7F3EC", minHeight: "100vh", paddingTop: 80 }}>
 
       {/* Hero */}
       <div style={{ position: "relative", height: "52vh", minHeight: 360 }}>
-        <img src={IMGS.aboutimage1} alt="Skarchan Resorts aerial" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", background: "#EDE0CE" }} />
+        <img src={IMGS.aboutimage1} alt="Skarchan Resort aerial" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", background: "#EFEAE0" }} />
         <div style={{ position: "absolute", inset: 0, background: "rgba(30,18,8,0.52)" }} />
         <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 32px" }}>
           <div>
             <p className="section-label" style={{ textAlign: "center" }}>OUR STORY</p>
-            <h1 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "clamp(32px, 6vw, 72px)", color: "#F5EFE6", fontWeight: 300, letterSpacing: 3, margin: 0 }}>
-              About Skarchan Resorts
+            <h1 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "clamp(32px, 6vw, 72px)", color: "#F7F3EC", fontWeight: 300, letterSpacing: 3, margin: 0 }}>
+              About Skarchan Resort
             </h1>
           </div>
         </div>
@@ -24,18 +24,18 @@ export default function AboutPage({ setPage }) {
       {/* Story */}
       <div style={{ maxWidth: 860, margin: "0 auto", padding: "80px 32px" }}>
         <AnimBlock>
-          <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "clamp(28px, 4vw, 46px)", color: "#1C1209", textAlign: "center", fontWeight: 400, margin: "0 0 0" }}>
+          <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "clamp(28px, 4vw, 46px)", color: "#211D19", textAlign: "center", fontWeight: 400, margin: "0 0 0" }}>
             Born From the Mountains
           </h2>
           <div className="gold-divider--center gold-divider" style={{ display: "block" }} />
           {[
-            "Skarchan Resorts was built with one vision: to create a place where travellers can find true sukoon — peace — in the cradle of the world's mightiest mountain range.",
+            "Skarchan Resort was built with one vision: to create a place where travellers can find true sukoon — peace — in the cradle of the world's mightiest mountain range.",
             "Located in Skardu, Gilgit-Baltistan, our property spans several acres of sculpted landscape featuring circular heritage huts, a central swimming pool, manicured lawns, and a domed restaurant that celebrates local culture through food and architecture.",
-            "We believe that luxury and authenticity are not opposites. Every structure at Skarchan Resort is built using traditional Baltistani techniques — mud-plaster walls, hand-carved wooden ceilings, stone pathways, and locally forged iron fixtures. Our guests often say it feels like stepping into a living museum, except with every modern comfort.",
+            "We believe that luxury and authenticity are not opposites. Every structure at Skarchan is built using traditional Baltistani techniques — mud-plaster walls, hand-carved wooden ceilings, stone pathways, and locally forged iron fixtures. Our guests often say it feels like stepping into a living museum, except with every modern comfort.",
             "We are committed to sustainable, community-rooted hospitality — employing local craftsmen, sourcing ingredients from nearby farms, and preserving the integrity of this sacred landscape for generations to come.",
           ].map((para, i) => (
             <AnimBlock key={i} delay={i * 0.1}>
-              <p style={{ fontFamily: "Lato, sans-serif", fontSize: 16, color: "#7A6652", lineHeight: 1.9, marginBottom: 22, textAlign: "center" }}>{para}</p>
+              <p style={{ fontFamily: "Lato, sans-serif", fontSize: 16, color: "#6E6459", lineHeight: 1.9, marginBottom: 22, textAlign: "center" }}>{para}</p>
             </AnimBlock>
           ))}
         </AnimBlock>
@@ -44,9 +44,9 @@ export default function AboutPage({ setPage }) {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginTop: 60 }}>
           {[["6+", "Room Types"], ["3 kanal", "Resort Grounds"], ["Skardu", "GB, Pakistan"]].map(([num, label]) => (
             <AnimBlock key={label}>
-              <div style={{ textAlign: "center", padding: "32px 16px", border: "1px solid #C8B49A", background: "#EEE5D6" }}>
-                <p style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 40, color: "#C4922A", margin: "0 0 8px", fontWeight: 700 }}>{num}</p>
-                <p style={{ fontFamily: "Lato, sans-serif", fontSize: 11, letterSpacing: 2, color: "#7A6652", margin: 0, textTransform: "uppercase" }}>{label}</p>
+              <div style={{ textAlign: "center", padding: "32px 16px", border: "1px solid #B7AE9E", background: "#F0EAE0" }}>
+                <p style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 40, color: "#A85A2E", margin: "0 0 8px", fontWeight: 700 }}>{num}</p>
+                <p style={{ fontFamily: "Lato, sans-serif", fontSize: 11, letterSpacing: 2, color: "#6E6459", margin: 0, textTransform: "uppercase" }}>{label}</p>
               </div>
             </AnimBlock>
           ))}
@@ -54,21 +54,21 @@ export default function AboutPage({ setPage }) {
       </div>
 
       {/* Two-column story + image */}
-      <section style={{ background: "#EDE0CE", padding: "80px 32px" }}>
+      <section style={{ background: "#EFEAE0", padding: "80px 32px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center" }}>
           <AnimBlock from="left">
-            <img src={IMGS.aboutimage2} alt="Heritage fort exterior" loading="lazy" style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", boxShadow: "6px 6px 0 #C4922A", background: "#EDE0CE" }} />
+            <img src={IMGS.aboutimage2} alt="Heritage fort exterior" loading="lazy" style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", boxShadow: "6px 6px 0 #A85A2E", background: "#EFEAE0" }} />
           </AnimBlock>
           <AnimBlock from="right">
             <p className="section-label">OUR DESIGN PHILOSOPHY</p>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "clamp(26px, 3vw, 40px)", color: "#1C1209", margin: "0 0 0", fontWeight: 400 }}>
+            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "clamp(26px, 3vw, 40px)", color: "#211D19", margin: "0 0 0", fontWeight: 400 }}>
               Heritage Meets Hospitality
             </h2>
             <div className="gold-divider" />
-            <p style={{ fontFamily: "Lato, sans-serif", fontSize: 15, color: "#7A6652", lineHeight: 1.9, marginBottom: 18 }}>
+            <p style={{ fontFamily: "Lato, sans-serif", fontSize: 15, color: "#6E6459", lineHeight: 1.9, marginBottom: 18 }}>
               Inspired by the ancient forts and circular dwelling traditions of Baltistan, our architects worked closely with local artisans to design each structure from the ground up.
             </p>
-            <p style={{ fontFamily: "Lato, sans-serif", fontSize: 15, color: "#7A6652", lineHeight: 1.9 }}>
+            <p style={{ fontFamily: "Lato, sans-serif", fontSize: 15, color: "#6E6459", lineHeight: 1.9 }}>
               The result is a resort that does not sit on the landscape — it grows from it. Stone walls, earthen plaster, dark timber, and warm amber lighting create a harmony between shelter and sky that you have to experience to fully understand.
             </p>
           </AnimBlock>

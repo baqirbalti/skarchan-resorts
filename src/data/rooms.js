@@ -70,7 +70,7 @@ export const ROOMS = [
     maxMattress: 2,
     mattressPrice: 3000,
 
-    heroImg: IMGS.deluxehero,
+    heroImg: IMGS.hero03,
     gallery: [IMGS.hero03, IMGS.deluxeluxarysuite01, IMGS.deluxeluxarysuite02, IMGS.deluxeluxarysuite03, IMGS.deluxeluxarysuite04, IMGS.deluxeluxarysuite05, IMGS.deluxeluxarysuite06, IMGS.deluxeluxarysuite07, IMGS.deluxeluxarysuite08, IMGS.deluxeluxarysuite0],
     desc: "Spacious and luxurious, designed for families or larger groups.",
     longDesc: "Unique round design, airy living space, and stylish lounge setup—ideal for up to 4 adults to unwind and enjoy a serene Skardu escape.",
@@ -151,7 +151,7 @@ export const ROOMS = [
     heroImg: IMGS.kingsuite01,
     gallery: [IMGS.kingsuite01, IMGS.kingsuite02, IMGS.kingsuite03,   IMGS.kingsuite04, IMGS.kingsuite05, IMGS.kingsuite06],
     desc: "Our largest accommodation, offering multiple bedrooms for ultimate privacy.",
-    longDesc: "The pinnacle of Skarchan Resorts. The King Suite offers two separate bedrooms and a spacious living room. It's the perfect sanctuary for large families seeking the highest level of comfort and privacy in the Karakoram.",
+    longDesc: "The pinnacle of Skarchan Resort. The King Suite offers two separate bedrooms and a spacious living room. It's the perfect sanctuary for large families seeking the highest level of comfort and privacy in the Karakoram.",
     measurements: [
       "Total Area: 73 m²/786 ft²",
       "Bedroom 1: 1 Extra-large double bed",

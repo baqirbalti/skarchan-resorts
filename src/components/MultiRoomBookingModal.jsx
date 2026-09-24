@@ -20,8 +20,8 @@ import { getRoomVariants } from "../data/rooms.js";
 import { submitBookingToSheet, todayStr } from "../config.js";
 
 const qtyBtnStyle = {
-  width: 28, height: 28, borderRadius: "50%", border: "1px solid #C8B49A",
-  background: "#FFFFFF", color: "#984A1C", fontSize: 16, fontWeight: 700,
+  width: 28, height: 28, borderRadius: "50%", border: "1px solid #B7AE9E",
+  background: "#FFFFFF", color: "#A85A2E", fontSize: 16, fontWeight: 700,
   cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center",
   lineHeight: 1, flexShrink: 0,
 };
@@ -29,7 +29,7 @@ const qtyBtnStyle = {
 const mattressBtnStyle = { ...qtyBtnStyle, width: 22, height: 22, fontSize: 12 };
 
 const inputStyle = {
-  width: "100%", padding: "12px 14px", border: "1px solid #E0D8C8", borderRadius: 6,
+  width: "100%", padding: "12px 14px", border: "1px solid #DDD5C7", borderRadius: 6,
   fontSize: 14, fontFamily: "Lato, sans-serif", outline: "none", boxSizing: "border-box", background: "#FFF",
 };
 const labelStyle = { display: "block", fontSize: 12, fontWeight: 700, color: "#555", marginBottom: 6, fontFamily: "Lato, sans-serif" };
@@ -148,22 +148,22 @@ export default function MultiRoomBookingModal({ onClose, onSuccess, initialQuant
 
   return (
     <div style={{ position: "fixed", inset: 0, zIndex: 1000, background: "rgba(0,0,0,0.65)", display: "flex", alignItems: "center", justifyContent: "center", padding: 20 }}>
-      <div style={{ background: "#F9F6F0", width: "100%", maxWidth: 620, maxHeight: "92vh", borderRadius: 12, overflowY: "auto", position: "relative", boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
+      <div style={{ background: "#F8F4EC", width: "100%", maxWidth: 620, maxHeight: "92vh", borderRadius: 12, overflowY: "auto", position: "relative", boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
         <button onClick={onClose} style={{ position: "absolute", top: 16, right: 16, background: "#fff", border: "none", borderRadius: "50%", width: 32, height: 32, cursor: "pointer", fontWeight: "bold", zIndex: 10, boxShadow: "0 2px 10px rgba(0,0,0,0.2)" }}>✕</button>
 
         <div style={{ padding: "40px 32px" }}>
-          <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 30, color: "#1C1209", margin: "0 0 4px" }}>Book Your Stay</h2>
-          <p style={{ fontFamily: "Lato, sans-serif", fontSize: 13, color: "#8C7B6B", margin: "0 0 24px" }}>
+          <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 30, color: "#211D19", margin: "0 0 4px" }}>Book Your Stay</h2>
+          <p style={{ fontFamily: "Lato, sans-serif", fontSize: 13, color: "#7D7368", margin: "0 0 24px" }}>
             {showAllRooms
               ? "Choose any mix of rooms — different types, different quantities — then fill your details once."
               : `Booking the ${primaryRoomName}. Add an extra mattress below if needed, or add other rooms to this same request.`}
           </p>
 
           {/* ── Step 1: Room selection ────────────────────────── */}
-          <p style={{ fontFamily: "Lato, sans-serif", fontSize: 11, letterSpacing: 2, color: "#984A1C", fontWeight: 700, textTransform: "uppercase", margin: "0 0 10px" }}>
+          <p style={{ fontFamily: "Lato, sans-serif", fontSize: 11, letterSpacing: 2, color: "#A85A2E", fontWeight: 700, textTransform: "uppercase", margin: "0 0 10px" }}>
             1. Select Rooms
           </p>
-          <div style={{ border: "1px solid #EDE6D8", borderRadius: 8, padding: "4px 16px", marginBottom: 12, background: "#FFFFFF" }}>
+          <div style={{ border: "1px solid #F0EAE0", borderRadius: 8, padding: "4px 16px", marginBottom: 12, background: "#FFFFFF" }}>
             {visibleVariants.map(v => {
               const qty = quantities[v.key] || 0;
               const mCount = mattresses[v.key] || 0;
@@ -177,21 +177,21 @@ export default function MultiRoomBookingModal({ onClose, onSuccess, initialQuant
                       style={{ width: 64, aspectRatio: "4/3", objectFit: "cover", borderRadius: 6, flexShrink: 0 }}
                     />
                     <div style={{ flex: 1, minWidth: 0 }}>
-                      <p style={{ margin: "0 0 2px", fontFamily: "Cormorant Garamond, serif", fontSize: 17, color: "#1C1209", fontWeight: 600, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                      <p style={{ margin: "0 0 2px", fontFamily: "Cormorant Garamond, serif", fontSize: 17, color: "#211D19", fontWeight: 600, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
                         {v.room.name}
                         {v.variantLabel && (
-                          <span style={{ fontFamily: "Lato, sans-serif", fontSize: 11, fontWeight: 700, color: "#984A1C", marginLeft: 8, letterSpacing: 0.5 }}>
+                          <span style={{ fontFamily: "Lato, sans-serif", fontSize: 11, fontWeight: 700, color: "#A85A2E", marginLeft: 8, letterSpacing: 0.5 }}>
                             {v.variantLabel.toUpperCase()}
                           </span>
                         )}
                       </p>
-                      <p style={{ margin: 0, fontFamily: "Lato, sans-serif", fontSize: 12, color: "#8C7B6B" }}>
+                      <p style={{ margin: 0, fontFamily: "Lato, sans-serif", fontSize: 12, color: "#7D7368" }}>
                         {v.room.category} · Sleeps {v.room.capacity} · {formatPKR(v.price)} / night
                       </p>
                     </div>
                     <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
                       <button type="button" onClick={() => changeQty(v.key, -1)} style={qtyBtnStyle}>−</button>
-                      <span style={{ minWidth: 16, textAlign: "center", fontFamily: "Lato, sans-serif", fontWeight: 700, color: "#1C1209" }}>
+                      <span style={{ minWidth: 16, textAlign: "center", fontFamily: "Lato, sans-serif", fontWeight: 700, color: "#211D19" }}>
                         {qty}
                       </span>
                       <button type="button" onClick={() => changeQty(v.key, 1)} style={qtyBtnStyle}>+</button>
@@ -200,13 +200,13 @@ export default function MultiRoomBookingModal({ onClose, onSuccess, initialQuant
 
                   {/* Extra mattress — only offered once this room is selected */}
                   {qty > 0 && v.room.maxMattress > 0 && (
-                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 10, paddingTop: 10, borderTop: "1px dashed #EDE6D8", marginLeft: 78 }}>
-                      <span style={{ fontFamily: "Lato, sans-serif", fontSize: 12, color: "#8C7B6B" }}>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 10, paddingTop: 10, borderTop: "1px dashed #F0EAE0", marginLeft: 78 }}>
+                      <span style={{ fontFamily: "Lato, sans-serif", fontSize: 12, color: "#7D7368" }}>
                         + Extra mattress ({formatPKR(v.room.mattressPrice)}/night, max {v.room.maxMattress})
                       </span>
                       <div style={{ display: "flex", alignItems: "center", gap: 8, flexShrink: 0 }}>
                         <button type="button" onClick={() => changeMattress(v.key, -1, v.room.maxMattress)} style={mattressBtnStyle}>−</button>
-                        <span style={{ minWidth: 14, textAlign: "center", fontFamily: "Lato, sans-serif", fontWeight: 700, fontSize: 12, color: "#1C1209" }}>
+                        <span style={{ minWidth: 14, textAlign: "center", fontFamily: "Lato, sans-serif", fontWeight: 700, fontSize: 12, color: "#211D19" }}>
                           {mCount}
                         </span>
                         <button type="button" onClick={() => changeMattress(v.key, 1, v.room.maxMattress)} style={mattressBtnStyle}>+</button>
@@ -223,7 +223,7 @@ export default function MultiRoomBookingModal({ onClose, onSuccess, initialQuant
             <button
               type="button"
               onClick={() => setShowAllRooms(s => !s)}
-              style={{ background: "none", border: "none", padding: 0, marginBottom: 20, color: "#984A1C", fontFamily: "Lato, sans-serif", fontSize: 12.5, fontWeight: 700, letterSpacing: 0.3, cursor: "pointer", textDecoration: "underline" }}
+              style={{ background: "none", border: "none", padding: 0, marginBottom: 20, color: "#A85A2E", fontFamily: "Lato, sans-serif", fontSize: 12.5, fontWeight: 700, letterSpacing: 0.3, cursor: "pointer", textDecoration: "underline" }}
             >
               {showAllRooms ? `− Show only ${primaryRoomName}` : "+ Add other rooms to this booking"}
             </button>
@@ -231,8 +231,8 @@ export default function MultiRoomBookingModal({ onClose, onSuccess, initialQuant
 
           {/* Selection summary + live estimated total */}
           {totalRooms > 0 && (
-            <div style={{ background: "#FBF3E6", border: "1px solid #E7D9BE", borderRadius: 8, padding: "14px 16px", marginBottom: 24 }}>
-              <p style={{ margin: "0 0 8px", fontFamily: "Lato, sans-serif", fontSize: 11, letterSpacing: 1, color: "#984A1C", fontWeight: 700, textTransform: "uppercase" }}>
+            <div style={{ background: "#F7F1E6", border: "1px solid #E8DFCB", borderRadius: 8, padding: "14px 16px", marginBottom: 24 }}>
+              <p style={{ margin: "0 0 8px", fontFamily: "Lato, sans-serif", fontSize: 11, letterSpacing: 1, color: "#A85A2E", fontWeight: 700, textTransform: "uppercase" }}>
                 Your Selection ({totalRooms} room{totalRooms > 1 ? "s" : ""})
               </p>
               {selectedVariants.map(v => {
@@ -241,7 +241,7 @@ export default function MultiRoomBookingModal({ onClose, onSuccess, initialQuant
                   <div key={v.key} style={{ marginBottom: 6 }}>
                     <div style={{ display: "flex", justifyContent: "space-between" }}>
                       <p style={{ margin: 0, fontFamily: "Lato, sans-serif", fontSize: 14, color: "#333" }}>
-                        {label(v)} <span style={{ color: "#8C7B6B" }}>× {quantities[v.key]}</span>
+                        {label(v)} <span style={{ color: "#7D7368" }}>× {quantities[v.key]}</span>
                       </p>
                       <p style={{ margin: 0, fontFamily: "Lato, sans-serif", fontSize: 14, color: "#555" }}>
                         {formatPKR(v.price * quantities[v.key])}{nights > 0 ? " /night" : ""}
@@ -249,10 +249,10 @@ export default function MultiRoomBookingModal({ onClose, onSuccess, initialQuant
                     </div>
                     {mCount > 0 && (
                       <div style={{ display: "flex", justifyContent: "space-between" }}>
-                        <p style={{ margin: 0, fontFamily: "Lato, sans-serif", fontSize: 12, color: "#8C7B6B" }}>
+                        <p style={{ margin: 0, fontFamily: "Lato, sans-serif", fontSize: 12, color: "#7D7368" }}>
                           + {mCount} extra mattress{mCount > 1 ? "es" : ""}
                         </p>
-                        <p style={{ margin: 0, fontFamily: "Lato, sans-serif", fontSize: 12, color: "#8C7B6B" }}>
+                        <p style={{ margin: 0, fontFamily: "Lato, sans-serif", fontSize: 12, color: "#7D7368" }}>
                           {formatPKR(v.room.mattressPrice * mCount)}{nights > 0 ? " /night" : ""}
                         </p>
                       </div>
@@ -261,16 +261,16 @@ export default function MultiRoomBookingModal({ onClose, onSuccess, initialQuant
                 );
               })}
 
-              <div style={{ borderTop: "1px solid #E7D9BE", marginTop: 10, paddingTop: 10, display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
-                <p style={{ margin: 0, fontFamily: "Lato, sans-serif", fontSize: 13, color: "#1C1209", fontWeight: 700 }}>
+              <div style={{ borderTop: "1px solid #E8DFCB", marginTop: 10, paddingTop: 10, display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
+                <p style={{ margin: 0, fontFamily: "Lato, sans-serif", fontSize: 13, color: "#211D19", fontWeight: 700 }}>
                   Estimated Total{nights > 0 ? ` (${nights} night${nights > 1 ? "s" : ""})` : ""}
                 </p>
-                <p style={{ margin: 0, fontFamily: "Cormorant Garamond, serif", fontSize: 22, color: "#984A1C", fontWeight: 700 }}>
+                <p style={{ margin: 0, fontFamily: "Cormorant Garamond, serif", fontSize: 22, color: "#A85A2E", fontWeight: 700 }}>
                   {formatPKR(estimatedTotal)}
                 </p>
               </div>
               {nights === 0 && (
-                <p style={{ margin: "6px 0 0", fontFamily: "Lato, sans-serif", fontSize: 11, color: "#8C7B6B", fontStyle: "italic" }}>
+                <p style={{ margin: "6px 0 0", fontFamily: "Lato, sans-serif", fontSize: 11, color: "#7D7368", fontStyle: "italic" }}>
                   Per-night rate shown — select check-in &amp; check-out dates below for your full-stay total.
                 </p>
               )}
@@ -278,7 +278,7 @@ export default function MultiRoomBookingModal({ onClose, onSuccess, initialQuant
           )}
 
           {/* ── Step 2: Guest details ────────────────────────── */}
-          <p style={{ fontFamily: "Lato, sans-serif", fontSize: 11, letterSpacing: 2, color: "#984A1C", fontWeight: 700, textTransform: "uppercase", margin: "0 0 10px" }}>
+          <p style={{ fontFamily: "Lato, sans-serif", fontSize: 11, letterSpacing: 2, color: "#A85A2E", fontWeight: 700, textTransform: "uppercase", margin: "0 0 10px" }}>
             2. Your Details
           </p>
 
@@ -316,7 +316,7 @@ export default function MultiRoomBookingModal({ onClose, onSuccess, initialQuant
               <p style={{ fontFamily: "Lato, sans-serif", fontSize: 13, color: "#C0392B", margin: 0 }}>⚠ {error}</p>
             )}
 
-            <button type="submit" disabled={submitting} style={{ width: "100%", padding: "15px", background: submitting ? "#C9B79A" : "#C49B66", color: "#fff", border: "none", borderRadius: 6, fontWeight: "bold", fontSize: 16, marginTop: 6, cursor: submitting ? "not-allowed" : "pointer" }}>
+            <button type="submit" disabled={submitting} style={{ width: "100%", padding: "15px", background: submitting ? "#C3B7A2" : "#B99A6E", color: "#fff", border: "none", borderRadius: 6, fontWeight: "bold", fontSize: 16, marginTop: 6, cursor: submitting ? "not-allowed" : "pointer" }}>
               {submitting ? "Submitting..." : totalRooms > 0 ? `Request Booking — ${formatPKR(estimatedTotal)}` : "Request Booking"}
             </button>
           </form>

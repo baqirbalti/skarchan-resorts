@@ -10,13 +10,13 @@ import { ROOMS, defaultVariantKey } from "../data/rooms.js";
 // ── Reusable Info Box Component ───────────────────────────────
 function InfoBox({ title, items, children }) {
   return (
-    <div style={{ border: "1px solid #1C1209", borderRadius: 4, padding: "24px", marginBottom: "20px", background: "#FFFFFF" }}>
-      <h3 style={{ fontFamily: "Lato, sans-serif", fontSize: 17, color: "#1C1209", letterSpacing: 1, textTransform: "uppercase", margin: "0 0 16px", fontWeight: 400, borderBottom: "1px solid #E5E5E5", paddingBottom: 12, textAlign: title === "PRICE" || title === "AMENITIES" || title.includes("US") ? "center" : "left" }}>
+    <div style={{ border: "1px solid #211D19", borderRadius: 4, padding: "24px", marginBottom: "20px", background: "#FFFFFF" }}>
+      <h3 style={{ fontFamily: "Lato, sans-serif", fontSize: 17, color: "#211D19", letterSpacing: 1, textTransform: "uppercase", margin: "0 0 16px", fontWeight: 400, borderBottom: "1px solid #E5E5E5", paddingBottom: 12, textAlign: title === "PRICE" || title === "AMENITIES" || title.includes("US") ? "center" : "left" }}>
         {title}
       </h3>
       {items && items.map((item, i) => (
         <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 10, marginBottom: 10 }}>
-          <span style={{ color: "#C4922A", fontSize: 14 }}>➔</span>
+          <span style={{ color: "#A85A2E", fontSize: 14 }}>➔</span>
           <span style={{ fontFamily: "Lato, sans-serif", fontSize: 14, color: "#333", lineHeight: 1.5 }}>{item}</span>
         </div>
       ))}
@@ -82,20 +82,20 @@ export default function RoomDetailPage({ roomId, setPage }) {
                 
                 {/* 1st Line: Non-AC Price */}
                 <p style={{ fontFamily: "Lato, sans-serif", fontSize: 13, color: "#333", margin: room.priceAC ? "0 0 8px" : "0 0 16px", fontWeight: 700 }}>
-                  <span style={{ color: "#C4922A", marginRight: 8 }}>➔</span> {room.price} / Per Night (Non AC)
+                  <span style={{ color: "#A85A2E", marginRight: 8 }}>➔</span> {room.price} / Per Night (Non AC)
                 </p>
 
                 {/* 2nd Line: With AC Price (Yeh sirf tab show hogi jab rooms.js mein priceAC majood ho) */}
                 {room.priceAC && (
                   <p style={{ fontFamily: "Lato, sans-serif", fontSize: 13, color: "#333", margin: "0 0 16px", fontWeight: 700 }}>
-                    <span style={{ color: "#C4922A", marginRight: 8 }}>➔</span> {room.priceAC} / Per Night (with AC)
+                    <span style={{ color: "#A85A2E", marginRight: 8 }}>➔</span> {room.priceAC} / Per Night (with AC)
                   </p>
                 )}
 
                 <button
                   onClick={() => setIsBookingOpen(true)}
                   style={{
-                    width: "100%", padding: "12px", background: "#984A1C", color: "#fff", border: "none", borderRadius: 4, 
+                    width: "100%", padding: "12px", background: "#A85A2E", color: "#fff", border: "none", borderRadius: 4, 
                     fontWeight: 600, fontSize: 14, fontFamily: "Lato, sans-serif", cursor: "pointer"
                   }}
                 >
@@ -108,13 +108,13 @@ export default function RoomDetailPage({ roomId, setPage }) {
 
             <InfoBox title="CALL US AT">
               <p style={{ fontFamily: "Lato, sans-serif", fontSize: 14, color: "#333", margin: 0, textAlign: "center" }}>
-                <span style={{ color: "#C4922A", marginRight: 8 }}>📞</span> +92 355 4222280
+                <span style={{ color: "#A85A2E", marginRight: 8 }}>📞</span> +92 355 4222280
               </p>
             </InfoBox>
 
             <InfoBox title="EMAIL US AT">
               <p style={{ fontFamily: "Lato, sans-serif", fontSize: 14, color: "#333", margin: 0, textAlign: "center" }}>
-                <span style={{ color: "#C4922A", marginRight: 8 }}>✉️</span> info@skarchanresorts.com
+                <span style={{ color: "#A85A2E", marginRight: 8 }}>✉️</span> info@skarchanresorts.com
               </p>
             </InfoBox>
 
@@ -124,7 +124,7 @@ export default function RoomDetailPage({ roomId, setPage }) {
 
       {/* Photo Gallery — grid on desktop, swipeable carousel on mobile, opens Lightbox on click */}
       <div style={{ maxWidth: 1100, margin: "0 auto 80px", padding: "0 32px" }}>
-        <h3 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 28, color: "#1C1209", margin: "0 0 20px" }}>Room Gallery</h3>
+        <h3 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 28, color: "#211D19", margin: "0 0 20px" }}>Room Gallery</h3>
         <div className="room-gallery-grid">
           {room.gallery.map((src, i) => (
             <div key={i} className="room-gallery-item" onClick={() => setGalleryLightboxIdx(i)}>

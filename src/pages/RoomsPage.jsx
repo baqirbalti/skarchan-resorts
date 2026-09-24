@@ -16,19 +16,19 @@ export default function RoomsPage({ setPage, setRoomId }) {
   }, []);
 
   return (
-    <div style={{ background: "#F5EFE6", minHeight: "100vh", paddingTop: 80 }}>
+    <div style={{ background: "#F7F3EC", minHeight: "100vh", paddingTop: 80 }}>
 
       {/* Hero banner */}
-      <div style={{ background: "#2C1F14", padding: "70px 32px", textAlign: "center" }}>
+      <div style={{ background: "#2A2622", padding: "70px 32px", textAlign: "center" }}>
         <AnimBlock>
-          <p className="section-label" style={{ textAlign: "center", color: "#C4922A", fontSize: 12, letterSpacing: 3, fontWeight: 700, marginBottom: 12 }}>
+          <p className="section-label" style={{ textAlign: "center", color: "#A85A2E", fontSize: 12, letterSpacing: 3, fontWeight: 700, marginBottom: 12 }}>
             ACCOMMODATIONS
           </p>
-          <h1 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "clamp(32px, 6vw, 68px)", color: "#F5EFE6", fontWeight: 300, letterSpacing: 3, margin: 0 }}>
+          <h1 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "clamp(32px, 6vw, 68px)", color: "#F7F3EC", fontWeight: 300, letterSpacing: 3, margin: 0 }}>
             Rooms & Villas
           </h1>
-          <p style={{ fontFamily: "Lato, sans-serif", fontSize: 15, color: "#8C7B6B", maxWidth: 520, margin: "16px auto 0", lineHeight: 1.8 }}>
-            Each accommodation at Skarchan Resorts is a handcrafted retreat — designed to blend heritage architecture with modern comfort against the backdrop of the Karakoram.
+          <p style={{ fontFamily: "Lato, sans-serif", fontSize: 15, color: "#7D7368", maxWidth: 520, margin: "16px auto 0", lineHeight: 1.8 }}>
+            Each accommodation at Skarchan Resort is a handcrafted retreat — designed to blend heritage architecture with modern comfort against the backdrop of the Karakoram.
           </p>
         </AnimBlock>
       </div>
@@ -42,8 +42,8 @@ export default function RoomsPage({ setPage, setRoomId }) {
               onClick={() => setFilter(c)}
               style={{
                 padding: "10px 24px", borderRadius: 8, cursor: "pointer",
-                border: filter === c ? "1px solid #984A1C" : "1px solid #E5E5E5",
-                background: filter === c ? "#984A1C" : "#FFFFFF",
+                border: filter === c ? "1px solid #A85A2E" : "1px solid #E5E5E5",
+                background: filter === c ? "#A85A2E" : "#FFFFFF",
                 color: filter === c ? "#FFFFFF" : "#555555",
                 fontFamily: "Lato, sans-serif", fontSize: 12, letterSpacing: 1,
                 fontWeight: 700, transition: "all 0.3s",
@@ -62,7 +62,7 @@ export default function RoomsPage({ setPage, setRoomId }) {
           ? filtered.map((room, i) => (
               <RoomCard key={room.id} room={room} setPage={setPage} setRoomId={setRoomId} delay={i * 0.08} />
             ))
-          : <p style={{ fontFamily: "Lato, sans-serif", color: "#8C7B6B", gridColumn: "1/-1", textAlign: "center", padding: "60px 0" }}>No rooms in this category.</p>
+          : <p style={{ fontFamily: "Lato, sans-serif", color: "#7D7368", gridColumn: "1/-1", textAlign: "center", padding: "60px 0" }}>No rooms in this category.</p>
         }
       </div>
 

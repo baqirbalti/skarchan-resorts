@@ -7,8 +7,8 @@ export const HOTEL_NAME = "Skarchan Resort";
 export const HOTEL_TAGLINE = "Where the Mountains Meet Timeless Luxury";
 export const HOTEL_LOCATION = "Opposite to Buddha Rock, Skardu";
 export const HOTEL_EMAIL = "info@skarchanresorts.com";
-export const WHATSAPP_NUMBER = "923405979568"; // Replace with real number (no + sign)
-export const HOTEL_PHONE = "+92 340 5979568";
+export const WHATSAPP_NUMBER = "923322785666"; // Replace with real number (no + sign)
+export const HOTEL_PHONE = "+92 332 2785666";
 
 // ============================================
 // GOOGLE APPS SCRIPT — BOOKING FORM BACKEND
@@ -20,7 +20,7 @@ export const HOTEL_PHONE = "+92 340 5979568";
 //    - Execute as: Me
 //    - Who has access: Anyone
 // 4. Copy the deployment URL (ends with /exec) and paste it below.
-export const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyk7-wprW2xZfeLObpRWFGF0ftVY8sOEeuAz6zOo6cm7lMg7cQgL6OqO7gDD9WRJvDT3A/exec";
+export const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwYxpDpJGjvFUB8hb1eBsWdp_emzUe3kC311UMLOw8Tz9vrfVCu8maYEEeaoDsPBXIUUQ/exec";
 
 // Sends a room booking submission to the Google Apps Script backend,
 // which appends a row to the Google Sheet and emails the hotel.
@@ -54,7 +54,7 @@ export const buildBookingMessage = (roomName, checkIn, checkOut, guests) => {
   if (roomName && checkIn && checkOut && guests) {
     return `Assalamu Alaikum! 🌿
 
-I would like to make a reservation at Skarchan Resorts.
+I would like to make a reservation at Skarchan Resort.
 
 🏨 *Room:* ${roomName}
 📅 *Check-in:* ${formatDate(checkIn)}
@@ -70,7 +70,7 @@ Thank you! 🙏`;
   if (roomName) {
     return `Assalamu Alaikum! 🌿
 
-I am interested in booking the *${roomName}* at Skarchan Resorts, Skardu.
+I am interested in booking the *${roomName}* at Skarchan Resort, Skardu.
 
 Could you please share availability and pricing details?
 
@@ -79,7 +79,7 @@ Thank you! 🙏`;
 
   return `Assalamu Alaikum! 🌿
 
-I would like to make a reservation at Skarchan Resorts, Skardu.
+I would like to make a reservation at Skarchan Resort, Skardu.
 
 Could you please help me with availability and room options?
 
@@ -91,7 +91,7 @@ export const buildGeneralEnquiryMessage = (name, message) => {
 
 *Name:* ${name || "Guest"}
 
-${message || "I have an enquiry about Skarchan Resorts."}
+${message || "I have an enquiry about Skarchan Resort."}
 
 Thank you! 🙏`;
 };
