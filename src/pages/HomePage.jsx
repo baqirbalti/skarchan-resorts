@@ -475,8 +475,8 @@ function BookingReviews() {
 
 // ── 📍 Location Section ───────────────────────────────────────
 function LocationSection() {
-  const mapEmbedUrl = "https://www.google.com/maps?ll=35.270433,75.635115&z=17&t=m&hl=en-GB&gl=US&mapclient=embed&cid=15340048137973833197";
-  const directMapUrl = "https://www.google.com/maps?ll=35.270433,75.635115&z=17&t=m&hl=en-GB&gl=US&mapclient=embed&cid=15340048137973833197";
+  const mapEmbedUrl = "https://maps.google.com/maps?q=Skarchan+Resort+Skardu,+Pakistan&t=m&z=17&output=embed&iwloc=near";
+  const directMapUrl = "https://www.google.com/maps?cid=15340048137973833197";
 
   return (
     <>
